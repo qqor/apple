@@ -2,6 +2,8 @@ ARCH=x86_64
 TOOLCHAIN = $(PWD)/toolchain/build/bin
 
 
+APPLE=APPLE
+
 CC=$(TOOLCHAIN)/$(ARCH)-elf-gcc
 CFLAGS=-z max-page-size=0x1000 -O2  -ffreestanding -nostdinc -nostdlib -g -Wall -Wextra \
               -Werror  -I. -MMD -mno-red-zone -mcmodel=kernel -fno-pie -no-pie -Wl,--build-id=none
